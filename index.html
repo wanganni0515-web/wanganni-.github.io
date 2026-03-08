@@ -22,7 +22,7 @@ role-tables:
 
 <div class="jumbotron">
     <p>
-        <b>肖航课题组</b>开发了首个<b>基于字符串的可逆晶体表示法: SLICES</b>,实现了生成式AI驱动的<b>Text2Crystal</b>。SLICES有望成为AI驱动的晶体材料逆向设计的标准工具,即<b>晶体材料的"SMILES"</b>。 
+        <b>王安妮课题组</b>开发了首个<b>基于字符串的可逆晶体表示法: SLICES</b>,实现了生成式AI驱动的<b>Text2Crystal</b>。SLICES有望成为AI驱动的晶体材料逆向设计的标准工具,即<b>晶体材料的"SMILES"</b>。 
     </p>
     <p>
     The <b>XIAO Research Group</b> developed the first <b>string-based invertible, invariant crystallographic representation: SLICES</b>, achieving <b>Text2Crystal</b> powered by generative AI. SLICES has the potential to become a standard tool for <i> in-silico </i> materials discovery, i.e. "SMILES" for crystal structures.
@@ -45,12 +45,136 @@ role-tables:
     {% endif %}
 </section>
 
-<script
-	type="module"
-	src="https://gradio.s3-us-west-2.amazonaws.com/6.5.1/gradio.js"
-></script>
+<!-- 
+  ╔════════════════════════════════════════════════════════════════╗
+  ║  Gradio AI Demo - Complete Integration                         ║
+  ║  Gradio AI 演示 - 完整集成                                     ║
+  ╠════════════════════════════════════════════════════════════════╣
+  ║  Space: https://wanganni-wanganni.hf.space                     ║
+  ║  Technology: Gradio Web Components v6.5.1                      ║
+  ║  Features:                                                     ║
+  ║  ✅ Responsive design (响应式设计)                             ║
+  ║  ✅ Loading animation (加载动画)                               ║
+  ║  ✅ Error handling (错误处理)                                  ║
+  ║  ✅ Style isolation (样式隔离)                                 ║
+  ╚════════════════════════════════════════════════════════════════╝
+-->
 
-<gradio-app src="https://wanganni-wanganni.hf.space"></gradio-app>
+<!-- Gradio Demo Section (Gradio 演示区域) -->
+<section id="gradio-ai-demo" class="gradio-section" style="
+  margin: 3rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+">
+  
+  <!-- Section Header (区域标题) -->
+  <div style="text-align: center; margin-bottom: 2rem;">
+    <h2 style="color: white; font-size: 2rem; margin-bottom: 0.5rem;">
+      🤖 AI Demo (AI 演示)
+    </h2>
+    <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">
+      Try our AI-powered crystal structure prediction tool!
+      <br>
+      试试我们的 AI 驱动晶体结构预测工具！
+    </p>
+  </div>
+  
+  <!-- Gradio Container (Gradio 容器) -->
+  <div class="gradio-container" style="
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    background: white;
+    padding: 1.5rem;
+    min-height: 600px;
+  ">
+    
+    <!-- Loading Animation (加载动画) -->
+    <div id="gradio-loading" style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 400px;
+      color: #667eea;
+      font-size: 1.2rem;
+    ">
+      <div style="text-align: center;">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">⏳</div>
+        <div>Loading AI Demo...<br>正在加载 AI 演示...</div>
+      </div>
+    </div>
+    
+    <!-- Gradio App (hidden until loaded) -->
+    <div id="gradio-wrapper" style="display: none;">
+      <!-- Load Gradio Web Components (加载 Gradio Web 组件) -->
+      <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/6.5.1/gradio.js"></script>
+      
+      <!-- Embed Chatbot (嵌入 Chatbot) -->
+      <gradio-app 
+        src="https://wanganni-wanganni.hf.space"
+        style="width: 100%; min-height: 500px;"
+      ></gradio-app>
+    </div>
+    
+    <!-- Error Message (错误信息) -->
+    <div id="gradio-error" style="
+      display: none;
+      text-align: center;
+      padding: 2rem;
+      color: #dc3545;
+    ">
+      <div style="font-size: 3rem; margin-bottom: 1rem;">❌</div>
+      <div style="font-size: 1.2rem; margin-bottom: 1rem;">
+        Failed to load AI demo<br>
+        AI 演示加载失败
+      </div>
+      <div style="font-size: 0.9rem; color: #666;">
+        Please refresh the page or try again later<br>
+        请刷新页面或稍后重试
+      </div>
+    </div>
+    
+  </div>
+  
+</section>
+
+<!-- Gradio Loading Script (Gradio 加载脚本) -->
+<script>
+  // Gradio Loading Handler (Gradio 加载处理)
+  window.addEventListener('DOMContentLoaded', function() {
+    const loadingEl = document.getElementById('gradio-loading');
+    const wrapperEl = document.getElementById('gradio-wrapper');
+    const errorEl = document.getElementById('gradio-error');
+    const gradioApp = document.querySelector('gradio-app');
+    
+    // Timeout (超时处理)
+    const timeout = setTimeout(function() {
+      loadingEl.style.display = 'none';
+      errorEl.style.display = 'block';
+      console.error('Gradio loading timeout');
+    }, 30000); // 30 seconds
+    
+    // Load Event (加载完成)
+    if (gradioApp) {
+      gradioApp.addEventListener('load', function() {
+        clearTimeout(timeout);
+        loadingEl.style.display = 'none';
+        wrapperEl.style.display = 'block';
+        console.log('Gradio loaded successfully');
+      });
+      
+      // Error Event (错误处理)
+      gradioApp.addEventListener('error', function(e) {
+        clearTimeout(timeout);
+        loadingEl.style.display = 'none';
+        errorEl.style.display = 'block';
+        console.error('Gradio loading error:', e);
+      });
+    }
+  });
+</script>
 
 
 
