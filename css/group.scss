@@ -98,9 +98,13 @@ ul.news {
 }
 
 section h2 {
-    color: $primary-blue;
-    border-bottom: 2px solid $light-blue;
-    padding-bottom: 0.3rem;
+    color: #fff;
+    background: $medium-blue;
+    border-bottom: none;
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 0.5rem;
 }
 
 /* People section */
