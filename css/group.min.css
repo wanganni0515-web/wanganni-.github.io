@@ -202,3 +202,57 @@ svg {
 section {
   margin-bottom: 2em;
 }
+
+/* Collab section - add spacing */
+.role.collab .person {
+    margin-bottom: 0.75rem;
+}
+
+/* Jumbotron - better paragraph spacing */
+.jumbotron p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+/* Collab section - better spacing between people */
+.role.collab .person {
+    margin-bottom: 0.5rem;
+}
+
+/* Chatbot - match theme */
+#chatbot {
+    border: 2px solid #3a6ea5 !important;
+    border-radius: 12px !important;
+}
+
+/* Section spacing - add breathing room */
+section {
+    margin-bottom: 2.5rem;
+}
+/* Subtle section dividers */
+#people {
+    padding-top: 1.5rem;
+}
+/* Profile hover effect */
+.profile {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.profile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(26, 75, 124, 0.2);
+}
+/* Person name hover */
+.person-name a:hover {
+    color: #3a6ea5 !important;
+    text-decoration: none;
+}
+/* Footer cleaner look */
+.footer {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+}
+
+/* Videos section - lighter background */
+#videos {
+    background: #edf2f7;
+}
