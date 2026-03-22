@@ -81,13 +81,14 @@ ul.news > li {
   border-left: 2px solid #dce8f5;
 }
 
+#people > h2,
 section h2 {
-  color: #fff;
-  background: #3a6ea5;
+  color: #fff !important;
+  background: #3a6ea5 !important;
   border-bottom: none;
   padding: 0.4rem 1rem;
   border-radius: 8px;
-  display: inline-block;
+  display: inline-block !important;
   margin-bottom: 0.5rem;
 }
 
@@ -103,14 +104,15 @@ section h2 {
   color: #6b8cae;
 }
 #people .role.grad {
-  display: grid !important;
-  grid-template-columns: repeat(2, 1fr) !important;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
+  width: 100%;
 }
 #people .role.grad .person {
-  display: flex !important;
-  flex-direction: row !important;
-  width: 100% !important;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 /* Profile images */
