@@ -123,13 +123,9 @@ section h2 {
     }
 
     .role.grad {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-
-        > .person {
-            flex: 0 0 auto;
-        }
+        display: grid !important;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1.5rem;
     }
 }
 

@@ -103,12 +103,9 @@ section h2 {
   color: #6b8cae;
 }
 #people .role.grad {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-#people .role.grad > .person {
-  flex: 0 0 auto;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
 }
 
 /* Profile images */
