@@ -104,16 +104,13 @@ section h2 {
 }
 #people .role.grad {
   display: grid !important;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr) !important;
   gap: 1.5rem;
-  width: 100% !important;
-  max-width: 100% !important;
-  flex-direction: row !important;
 }
 #people .role.grad .person {
+  display: flex !important;
   flex-direction: row !important;
-  width: auto !important;
-  max-width: none !important;
+  width: 100% !important;
 }
 
 /* Profile images */
