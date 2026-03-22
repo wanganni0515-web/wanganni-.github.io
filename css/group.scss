@@ -98,12 +98,12 @@ ul.news {
 }
 
 section h2 {
-    color: #fff;
-    background: $medium-blue;
+    color: #fff !important;
+    background: $medium-blue !important;
     border-bottom: none;
     padding: 0.4rem 1rem;
     border-radius: 8px;
-    display: inline-block;
+    display: inline-block !important;
     margin-bottom: 0.5rem;
 }
 
