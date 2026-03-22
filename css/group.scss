@@ -123,15 +123,16 @@ section h2 {
     }
 
     .role.grad {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
+        width: 100%;
     }
 
     .role.grad .person {
-        display: flex !important;
-        flex-direction: row !important;
-        width: 100% !important;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
     }
 }
 
