@@ -92,6 +92,9 @@ section h2 {
 }
 
 /* People section */
+#people h3 {
+  font-size: 1rem;
+}
 #people .person-name {
   color: #1a4b7c;
   font-weight: 600;
