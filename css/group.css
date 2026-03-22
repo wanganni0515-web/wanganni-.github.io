@@ -81,19 +81,17 @@ ul.news > li {
   border-left: 2px solid #dce8f5;
 }
 
+/* People section */
 #people > h2,
-#people h2,
-section h2 {
+#people h2 {
   color: #fff !important;
   background: #3a6ea5 !important;
-  border-bottom: none;
-  padding: 0.4rem 1rem;
-  border-radius: 8px;
+  padding: 0.4rem 1rem !important;
+  border-radius: 8px !important;
   display: inline-block !important;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem !important;
 }
 
-/* People section */
 #people h3 {
   font-size: 1rem;
 }
@@ -169,7 +167,7 @@ section h2 {
 
 /* Videos section */
 #videos {
-  background: #eef5fb;
+  background: #dde0e4;
 }
 #videos h2 {
   color: #1a4b7c;
