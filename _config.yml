@@ -38,5 +38,9 @@ navigation:
     link: /
   - title: 科研 Research
     link: /research.html
+  - title: 成员 People
+    link: /people.html
   - title: 论文 Publications
     link: /publications.html
+  - title: 对话 Chat
+    link: /#chatbot-section

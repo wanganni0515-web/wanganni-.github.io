@@ -256,3 +256,15 @@ section {
 #videos {
     background: #edf2f7;
 }
+
+/* Navigation - add People link if missing */
+
+/* Chatbot section heading */
+#chatbot-section > h2 {
+    color: #fff !important;
+    background: #3a6ea5 !important;
+    padding: 0.4rem 1rem !important;
+    border-radius: 8px !important;
+    display: inline-block !important;
+    margin-bottom: 0.5rem !important;
+}
