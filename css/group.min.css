@@ -286,3 +286,15 @@ section {
     font-weight: 500;
     letter-spacing: 0.5px;
 }
+
+/* Nav - all 5 items on one row, compact */
+.nav-pills {
+    flex-wrap: nowrap !important;
+    gap: 0.25rem;
+}
+.nav-pills .nav-link {
+    padding: 0.4rem 0.8rem !important;
+    font-size: 0.9rem !important;
+    border-radius: 4px !important;
+    white-space: nowrap;
+}
